@@ -6,17 +6,22 @@
 <title>สรุปงาน LP รายวัน — Big C Sainoi</title>
 <style>
   :root{
-    --green-deep:#0B5D3B;
-    --green:#12804F;
-    --green-soft:#E4F3EC;
+    --green-deep:#132638;
+    --green:#28B7B3;
+    --green-soft:#DDF4F2;
     --red:#C8272A;
-    --cream:#FAF8F4;
-    --ink:#1B211D;
-    --muted:#6B756E;
-    --line-dot:#C9CFC9;
+    --cream:#EEF5F8;
+    --ink:#15283B;
+    --muted:#6F8090;
+    --line-dot:#D7E3E9;
     --card:#FFFFFF;
     --amber:#B8790A;
     --amber-soft:#FBF0DB;
+    --border:#D7E3E9;
+    --divider:#E6EEF2;
+    --blue:#43A7F2;
+    --blue-soft:#E7F2FB;
+    --teal-strong:#1FA39F;
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   html,body{margin:0;padding:0;}
@@ -28,7 +33,7 @@
     -webkit-font-smoothing:antialiased;
   }
   header{
-    background:linear-gradient(135deg,var(--green-deep),var(--green));
+    background:linear-gradient(135deg,var(--teal-strong),var(--blue));
     color:#fff;
     padding:22px 18px 26px;
     position:relative;
@@ -68,15 +73,15 @@
     border-radius:14px;
     padding:16px;
     margin-bottom:14px;
-    box-shadow:0 1px 3px rgba(11,93,59,0.08);
-    border:1px solid rgba(11,93,59,0.07);
+    box-shadow:0 1px 3px rgba(19,38,56,0.06);
+    border:1px solid var(--border);
   }
 
   .field-row{display:flex;gap:10px;margin-bottom:10px;}
   .field{flex:1;display:flex;flex-direction:column;gap:5px;}
   label{font-size:12px;color:var(--muted);font-weight:600;}
   input[type=text], input[type=date]{
-    border:1px solid #DADFDA;
+    border:1px solid var(--border);
     border-radius:9px;
     padding:10px 11px;
     font-size:14.5px;
@@ -92,7 +97,7 @@
     flex:1;
     padding:11px 8px;
     border-radius:10px;
-    border:1.5px solid #DADFDA;
+    border:1.5px solid var(--border);
     background:#fff;
     font-size:14px;
     font-weight:700;
@@ -103,13 +108,13 @@
   .shift-btn.active{
     border-color:var(--green);
     background:var(--green-soft);
-    color:var(--green-deep);
+    color:var(--teal-strong);
   }
 
   .section-title{
     font-size:13px;
     font-weight:700;
-    color:var(--green-deep);
+    color:var(--teal-strong);
     text-transform:uppercase;
     letter-spacing:.06em;
     margin:2px 0 10px;
@@ -123,8 +128,8 @@
     gap:12px;
     padding:14px;
     border-radius:12px;
-    background:#FBFCFB;
-    border:1px solid #E7EBE8;
+    background:#F7FBFC;
+    border:1px solid var(--divider);
     margin-bottom:10px;
   }
   .item-body{flex:1;min-width:0;}
@@ -147,7 +152,7 @@
     font-size:14.5px;
     font-weight:700;
     line-height:1.35;
-    border:1px solid #DADFDA;
+    border:1px solid var(--border);
     background:#fff;
     padding:5px 7px;
     border-radius:7px;
@@ -159,7 +164,7 @@
     outline-offset:1px;
   }
   .remove-btn{
-    border:none;background:none;color:#B7BDB7;
+    border:none;background:none;color:#AEBEC8;
     font-size:17px;line-height:1;padding:2px 6px;cursor:pointer;
     flex-shrink:0;
   }
@@ -170,7 +175,7 @@
     font-size:12px;
     padding:6px 11px;
     border-radius:999px;
-    border:1px solid #DADFDA;
+    border:1px solid var(--border);
     background:#fff;
     color:var(--muted);
     cursor:pointer;
@@ -179,15 +184,15 @@
     align-items:center;
     gap:4px;
   }
-  .chip.picked-ok{background:var(--green-soft);border-color:var(--green);color:var(--green-deep);font-weight:700;}
+  .chip.picked-ok{background:var(--green-soft);border-color:var(--green);color:var(--teal-strong);font-weight:700;}
   .chip.picked-bad{background:#FBE7E7;border-color:var(--red);color:var(--red);font-weight:700;}
   .chip.picked-warn{background:var(--amber-soft);border-color:var(--amber);color:var(--amber);font-weight:700;}
 
   .note-input{
     background:#fff !important;
-    border:1.3px solid #DFE4DF !important;
+    border:1.3px solid var(--border) !important;
   }
-  .note-input::placeholder{color:#A8AFA9;}
+  .note-input::placeholder{color:#A0AFB9;}
 
   .detail-line{
     display:flex;
@@ -212,9 +217,9 @@
     width:100%;
     padding:11px;
     border-radius:10px;
-    border:1.5px dashed #B9C4BC;
+    border:1.5px dashed #A9CFCD;
     background:transparent;
-    color:var(--green-deep);
+    color:var(--teal-strong);
     font-weight:700;
     font-size:13.5px;
     cursor:pointer;
@@ -227,11 +232,11 @@
     font-family:"Consolas","SFMono-Regular",monospace;
     font-size:12.5px;
     line-height:1.55;
-    background:#F4F6F4;
+    background:#F4F9FA;
     border-radius:10px;
     padding:12px;
-    color:#2B332E;
-    border:1px solid #E3E8E3;
+    color:var(--ink);
+    border:1px solid var(--border);
     max-height:260px;
     overflow-y:auto;
   }
@@ -240,7 +245,7 @@
     position:fixed;
     left:0;right:0;bottom:0;
     background:#fff;
-    border-top:1px solid #E3E8E3;
+    border-top:1px solid var(--border);
     padding:10px 16px calc(10px + env(safe-area-inset-bottom));
     display:flex;
     gap:10px;
@@ -257,9 +262,9 @@
     font-family:inherit;
     cursor:pointer;
   }
-  .btn-copy{background:#EEF1EE;color:var(--ink);}
+  .btn-copy{background:#F4F8FA;color:var(--ink);border:1px solid var(--border);}
   .btn-line{background:var(--green);color:#fff;}
-  .btn-line:active{background:var(--green-deep);}
+  .btn-line:active{background:var(--teal-strong);}
 
   .toast{
     position:fixed;
@@ -329,7 +334,7 @@
   <button class="btn btn-copy" onclick="copyText()">คัดลอก</button>
   <a class="btn btn-line" id="lineBtn" href="#" style="text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">ส่งเข้า LINE</a>
 </div>
-<p style="text-align:center;font-size:11.5px;color:#8A928B;max-width:520px;margin:6px auto 100px;padding:0 20px;">
+<p style="text-align:center;font-size:11.5px;color:#6F8090;max-width:520px;margin:6px auto 100px;padding:0 20px;">
   หมายเหตุ: ต้องเปิดหน้านี้ด้วย Safari หรือ Chrome เท่านั้น ถ้าเปิดผ่านแอป LINE เอง ปุ่มนี้จะไม่ทำงาน
 </p>
 
